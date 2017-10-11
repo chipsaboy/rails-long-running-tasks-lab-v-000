@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   require 'CSV'
+
   def index
     @songs = Song.all
   end
@@ -45,7 +46,6 @@ class SongsController < ApplicationController
     end
     redirect_to songs_path
   end
-
 
   def destroy
     @song = Song.find(params[:id])
